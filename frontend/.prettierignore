@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.prettierrc.js
+build
+coverage
+src\queries.ts
+src\reportWebVitals.ts

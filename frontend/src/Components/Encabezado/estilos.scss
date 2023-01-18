@@ -1,0 +1,47 @@
+@import '../../variables.scss';
+
+.Encabezado {
+    // border: 1px lightgreen solid;
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $theme-tertiary;
+    & > span {
+        border: none;
+        cursor: pointer;
+        img {
+            width: 8vh;
+            // justify-self: flex-start;
+            position: absolute;
+            top: .6vh;
+            left: 1vh;
+        }
+    }
+
+    &>.btn {
+        border-color: $blanco;
+        width: 10vw;
+        height: 3.5vh;
+        background-color: $theme-secondary;
+        color: $blanco;
+        
+        &:hover {
+            color: $theme-secondary;
+            border-color: $theme-secondary;
+            background-color: $blanco;
+            box-shadow: 1px 1px 2px $blanco;
+            text-shadow: 1px 1px $theme-secondary;
+            font-weight: bold;
+        }
+    }
+
+    div .btn {
+        &:hover {
+            color: $theme-secondary;
+            font-weight: bold;
+            text-shadow: 1px 1px $blanco;
+        }
+    }
+}

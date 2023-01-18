@@ -1,0 +1,8 @@
+@import '../../variables.scss';
+
+.Home {
+    & > section {
+        overflow: auto;
+    }
+
+}

@@ -1,0 +1,52 @@
+
+$num-columnas: 1;
+
+.home {
+    // https: //css-tricks.com/an-auto-filling-css-grid-with-max-columns/
+    --grid-layout-gap: 10px;
+    --grid-column-count: 4;
+    --grid-item--min-width: 100px;
+
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+    /* background-color: red; */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(
+            max(var(--grid-item--min-width),
+            var(--grid-item--max-width)),
+            1fr
+        )
+    );
+    // grid-template-columns: repeat($num-columnas, 1fr);
+    // grid-template-columns: repeat(
+    //     auto-fill,
+    //     minmax(200px,max(33%, 1fr))
+    // );
+    justify-items: center;
+    // gap: 5vh 1vw;
+    grid-gap: var(--grid-layout-gap);
+    overflow: auto;
+    width: 100vw;
+    height: 84vh;
+    margin: 0 0 1vh;
+}
+
+// @media (min-width: 700px) {
+//     $num-columnas: 4;
+//     .home {
+//         // background-color: blue;
+//         grid-template-columns: repeat($num-columnas, 1fr);
+//     }
+// }
+
+// @media (min-width: 500px) and (max-width: 700px) {
+//     $num-columnas: 2;
+//     .home {
+//         // background-color: blue;
+//         grid-template-columns: repeat($num-columnas, 1fr);
+//     }
+// }

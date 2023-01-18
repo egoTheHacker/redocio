@@ -1,0 +1,26 @@
+
+.Menu {
+    border: 1px solid yellow;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 20vw;
+    top: 10vh;
+    right: 5px;
+    // left: 2px;
+    z-index: 2;
+    background-color: white;
+    margin: 0;
+    padding: 5px 15px;
+    list-style: none;
+    li > * {
+        text-decoration: none;
+        border: none;
+        font-size: 1em;
+        color: black;
+    }
+    li > *:hover {
+        color: red;
+    }
+}

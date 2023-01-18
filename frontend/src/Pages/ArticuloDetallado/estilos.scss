@@ -1,0 +1,77 @@
+@import '../../variables.scss';
+.ArticuloDetallado {
+    padding: 3vh 2vw;
+    height: 90vh;
+    display: flex;
+    gap: 3vw;
+    
+    #art-det {
+        display: flex;
+        flex-direction: column;
+        gap: .8em;
+        height: 45vh;
+        // overflow-y: auto;
+        
+        article {
+            display: flex;
+            gap: 5px;
+            width: 72vw;
+            border: 1px solid white;
+            padding: 3px;
+            border-radius: 5px;
+            background-color: beige;
+            
+            legend {align-self: flex-start;}
+            
+            p {
+                margin: 0;
+                padding: 1px;
+                max-height: 25vh;
+                overflow-y: auto;
+            }
+        }
+        // legend, p {display: inline;}
+    }
+
+    #art-com {
+        position: absolute;
+        border: 1px blue solid;
+        bottom: 8vh;
+        width: 95vw;
+        height: 35vh;
+        padding: 1vh 2vw;
+    }
+
+    #com-envio {
+        position: absolute;
+        display: flex;
+        gap: 2px;
+        // border: 1px solid red;
+        height: 8vh;
+        bottom: 4vh;
+        width: 90vw;
+        left: 5vw;
+        // background-color: white;
+        border-radius: 15px;
+        align-items: center;
+
+        & > * {
+            height: 70%;
+        }
+
+        #com-campo {
+            width: 95%;
+            position: relative;
+            // top: 10px;
+            font-size: 16px;
+            outline: none;
+            resize: none;
+            border-radius: 10px 0 0 10px;
+            padding: 1px 5px;
+        }
+        .btn {
+            background-color: $blanco;
+            border-radius: 0 10px 10px 0;
+        }
+    }
+}

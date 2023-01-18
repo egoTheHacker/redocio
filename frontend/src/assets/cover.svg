@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="220" height="350">
+    <rect width="220" height="350" style="fill:beige;" />
+    <text x="5" y="160" font-size=".9em" fill="currentColor">
+        Titulo
+    </text>
+    <text x="5" y="175" font-size=".7em" fill="currentColor">
+        Creador
+    </text>
+</svg>

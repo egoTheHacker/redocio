@@ -1,0 +1,117 @@
+@import '../../variables.scss';
+
+@mixin appereance {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.Auth {
+    border: 1px $theme-secondary solid;
+    position: absolute;
+    display: flex;
+    width: 90vw;
+    height: 70vh;
+    z-index: 2;
+    background-color: #9999;
+    left: 5vw;
+    align-items: center;
+    // padding: 10px;
+    top: 15vh;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px;
+        align-items: center;
+        justify-content: center;
+        border-right: 2px $theme-tertiary solid;
+        height: 99%;
+        width: 70%;
+        // font-size: 1.6em;
+        input {
+            font-size: 1.6em;
+            outline: none;
+            text-align: center;
+            // justify-self: center;
+            &::placeholder {
+                // opacity: 1;
+                color: #333;
+            }
+            &:not(.btn) {
+                padding-left: 10px;
+                border: none;
+                background-color: transparent;
+                // text-decoration: underline solid $theme-tertiary;
+                border-bottom: 2px solid $theme-tertiary;
+                width: 50%;
+            }
+            
+            &:not(.btn):focus {
+                // -moz-appearance: none;
+                background-color: $theme-tertiary;
+                text-decoration: none;
+            }
+            
+            &.btn {
+                width: 10vw;
+                height: 4vh;
+                font-weight: bold;
+                font-size: 1em;
+                border-radius: 5px;
+                border: 1px solid;
+                color: $theme-tertiary;
+                &:hover {
+                    box-shadow: 1px 1px 2px black;
+                    border-color: black;
+                }
+            }
+    
+            &[type=submit] {
+                background-color: $azul;
+                &:hover {
+                    color: $azul;
+                    background-color: $theme-tertiary;
+                }
+            }
+    
+            &[type=reset] {
+                background-color: $rojo;
+                &:hover {
+                    color: $rojo;
+                    background-color: $theme-tertiary;
+                }
+            }
+        }
+        .grupo-btn {
+            position: relative;
+            display: flex;
+            // justify-self: end;
+            bottom: -10vw;
+            gap: 3vw;
+            justify-content: center;
+        }
+    }
+    aside {
+        height: 99%;
+        width: 30%;
+        padding: 0 1.5vw;
+        font-size: 1.3em;
+        position: relative;
+        top: 30vh;
+
+        .btn {
+            border: none;
+            font-size: .9em;
+            font-weight: bold;
+            &:hover {
+                color: $theme-tertiary;
+                text-decoration: underline solid $theme-tertiary;
+            }
+        }
+    }
+}

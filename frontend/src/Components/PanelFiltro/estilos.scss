@@ -1,0 +1,111 @@
+@import '../../variables.scss';
+
+.PanelFiltro {
+    width: 100vw;
+    height: 10vh;
+    padding-top: 1vh;
+    // box-shadow: 1px 1px black;
+    border-bottom: 1px solid black;
+    
+    .filtros {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    
+        // &, & * {border: 1px solid purple;}
+        ul {
+            list-style: none;
+            padding: 0;
+            position: absolute;
+            z-index: 2;
+            background-color: $theme-tertiary;
+            border: 1px solid $theme-secondary;
+            top: 15vh;
+            left: 30vw;
+            box-shadow: 1px 1px 2px black;
+    
+            li:first-child {
+                width: 3.5vh;
+                float: right;
+    
+                &:hover {
+                    text-shadow: 1px 1px $theme-secondary;
+                    font-weight: bold;
+                    color: $blanco;
+                    background-color: $theme-tertiary;
+                }
+            }
+    
+            li {
+                clear: both;
+                padding: 1px 10px;
+                width: 30vw;
+                height: 3.5vh;
+                color: $theme-secondary;
+                cursor: pointer;
+                text-align: center;
+    
+                &:hover {
+                    background-color: $theme-secondary;
+                    color: $blanco;
+                }
+            }
+        }
+    
+        & .btn {
+            border-color: $blanco;
+            width: 8vw;
+            height: 3.5vh;
+            background-color: $theme-secondary;
+            color: $blanco;
+    
+            &:hover {
+                color: $theme-secondary;
+                border-color: $theme-secondary;
+                background-color: $blanco;
+                box-shadow: 1px 1px 2px $blanco;
+                text-shadow: 1px 1px $theme-secondary;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .filtrado {
+        // border: 1px solid yellow;
+        padding: 1vh 2vw;
+        display: flex;
+        gap: 1vw;
+        // justify-items: center;
+        justify-content: center;
+
+        div, & > .btn {
+            border: 1px solid $blanco;
+            padding: 1px 10px;
+            background-color: $theme-tertiary;
+        }
+
+        div {
+            display: flex;
+
+            .btn {
+                position: relative;
+                right: -9px;
+                width: 15px;
+                background-color: $blanco;
+                border: 1px solid transparent;
+
+                &:hover {
+                    border-color: $blanco;
+                    background-color: $rojo;
+                    color: $blanco;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        & > .btn:hover {
+            color: $blanco;
+            background-color: $azul;
+        }
+    }
+}
