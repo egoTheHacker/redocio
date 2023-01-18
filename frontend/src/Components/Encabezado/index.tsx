@@ -30,10 +30,10 @@ export function Encabezado({
         if (homeRuta !== location) setLocation(homeRuta)
         // if (articulo.id) dispatch(init())
     }
-    useEffect(() => {
-        console.log('Usuario cambiado')
-        console.log(usuario)
-    }, [usuario])
+    // useEffect(() => {
+    //     console.log('Usuario cambiado')
+    //     console.log(usuario)
+    // }, [usuario])
     return (
         <header className='Encabezado'>
             <span className='logo' onClick={homeHandler}>

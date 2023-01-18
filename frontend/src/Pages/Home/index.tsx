@@ -27,9 +27,11 @@ export function Home() {
     return (
         <>
             <Encabezado mostrarLogin={mostrarLogin}>
-                <button className='btn' onClick={() => cambiarSeccion('docs')}>
+                <a
+                    className='btn'
+                    href='https://github.com/egoTheHacker/redocio'>
                     Docs
-                </button>
+                </a>
                 <button
                     className='btn'
                     onClick={() => cambiarSeccion('comunidad')}>
