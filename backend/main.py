@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 from strawberry.flask.views import GraphQLView
 # from strawberry.subscriptions import GRAPHQL_TRANSPORT_WS_PROTOCOL, GRAPHQL_WS_PROTOCOL
 from flask_cors import CORS
@@ -6,7 +6,7 @@ from flask_cors import CORS
 from api.schema import schema
 from models import db
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='../frontend/build')
 CORS(app)
 app.config['MONGODB_SETTINGS'] = {
     'db': 'redocio',
@@ -20,6 +20,12 @@ db.init_app(app)
 #     GRAPHQL_TRANSPORT_WS_PROTOCOL,
 #     GRAPHQL_WS_PROTOCOL,
 # ]
+
+
+@app.route("/", defaults={'path': ''})
+def serve(path):
+    return send_from_directory(app.static_folder, 'index.html')
+
 
 app.add_url_rule(
     "/graphql",
